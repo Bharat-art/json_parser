@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+    <title>User Forms</title>
+</head>
+<body>
+<h2>User Forms</h2>
+
+<form action="/display/" method="post">
+    {% csrf_token %}
+    <table>
+    {{form}}
+
+ </table>
+<input type="submit" value="Submit" />
+</form>
+</body>
+</html>
